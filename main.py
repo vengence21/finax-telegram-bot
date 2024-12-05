@@ -86,6 +86,9 @@ async def handle_response(update: Update, context: ContextTypes.DEFAULT_TYPE):
         # parse the message
         username, user_id, draw_id, entry, bet_type_id, multiplier, entry_size = parse_message(text)
 
+        if len(entry) != 4:
+            raise ValueError("Invalid entry. Please enter four digits only.")
+
         # insert in database
         entry_data = insert_entry_to_db(user_id=user_id, draw_id=draw_id, entry=entry, bet_type_id=bet_type_id, multiplier=multiplier, entry_size=entry_size)
 
