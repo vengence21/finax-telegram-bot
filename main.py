@@ -10,13 +10,13 @@ from entry_data import EntryData
 
 TOKEN: Final = os.getenv("TOKEN")
 BOT_USERNAME: Final = os.getenv("BOT_USERNAME")
-DATABASE_URI: Final = os.getenv("DATABASE_URI")
+DATABASE_URL: Final = os.getenv("DATABASE_URL")
 
 # logging configurations
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-dao = DAO(DATABASE_URI)
+dao = DAO(DATABASE_URL)
 
 
 # commands
