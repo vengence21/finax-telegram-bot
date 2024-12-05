@@ -13,4 +13,4 @@ class EntryData:
         amount = 0.8 if self.entry_size == 'b' else 0.7
         total_amount = amount * self.multiplier
 
-        return f"Entry: {self.entry}; Amount: {total_amount:.2f}; Time: {self.added_on.strftime('%d/%m/%Y %H:%M:%S')}"
+        return f"Entry: {self.entry}; Amount: ${total_amount:.2f}; Time: {self.added_on.strftime('%d/%m/%Y %H:%M:%S')}"
